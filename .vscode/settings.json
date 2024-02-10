@@ -1,0 +1,30 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".eslintrc2.json": true,
+    ".gitignore": true,
+    "index.html": true,
+    "package-lock.json": true,
+    "package.json": true,
+    ".vscode": true,
+    "dummydata": true,
+    "uploads": true,
+    "node_modules": true
+  },
+  "hide-files.files": [
+    ".eslintrc2.json",
+    ".gitignore",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    ".vscode",
+    "dummydata",
+    "uploads",
+    "node_modules"
+  ]
+}
