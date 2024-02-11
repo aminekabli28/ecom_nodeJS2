@@ -1,6 +1,6 @@
 const multer = require("multer");
 const ApiError = require("../../api/ApiErrors");
-const sharp = require("sharp");
+// const sharp = require("sharp");
 const handleAsync = require("async-error-handler");
 
 // const categoryStorage = multer.diskStorage({
@@ -37,11 +37,11 @@ const CategoryResizeImage = handleAsync(async (req, res, next) => {
   const filename =
     Date.now() + "-" + (Math.round(Math.random() * 1e9) + `.jpeg`);
   req.body.image = filename;
-  await sharp(req.file.buffer)
-    .resize(400, 400)
-    .toFormat("jpeg")
-    .jpeg({ quality: 90 })
-    .toFile(`uploads/categories/${filename}`);
+  // await sharp(req.file.buffer)
+  //   .resize(400, 400)
+  //   .toFormat("jpeg")
+  //   .jpeg({ quality: 90 })
+  //   .toFile(`uploads/categories/${filename}`);
   next();
 });
 

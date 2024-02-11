@@ -1,6 +1,6 @@
 const multer = require("multer");
 const ApiError = require("../../api/ApiErrors");
-const sharp = require("sharp");
+// const sharp = require("sharp");
 const handleAsync = require("async-error-handler");
 
 const fileFilter = function (req, file, cb) {
@@ -29,12 +29,12 @@ const productResizeImage = handleAsync(async (req, res, next) => {
         const imageName =
           Date.now() + "-" + (Math.round(Math.random() * 1e9) + `.jpeg`);
 
-        await sharp(img.buffer)
-          .resize(400, 400)
-          .toFormat("jpeg")
-          .jpeg({ quality: 90 })
-          .toFile(`uploads/products/${imageName}`);
-        req.body.images.push(imageName);
+        //   await sharp(img.buffer)
+        //     .resize(400, 400)
+        //     .toFormat("jpeg")
+        //     .jpeg({ quality: 90 })
+        //     .toFile(`uploads/products/${imageName}`);
+        //   req.body.images.push(imageName);
       })
     );
     req.body.imageCover = req.body.images[0];
